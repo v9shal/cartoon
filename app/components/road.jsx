@@ -25,10 +25,7 @@ const SIGNBOARD_TYPES = [
 
 const HighwayGame = () => {
   const mountRef = useRef(null);
-  const [gameState, setGameState] = useState({
-    score: 0,
-    currentMessage: "Use Arrow Keys to Drive"
-  });
+
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -113,7 +110,6 @@ const HighwayGame = () => {
       return signboards;
     };
 
-    // Load Car with Texture
     const loadCar = () => {
       return new Promise((resolve) => {
         textureLoader.load("/car.jpg", (texture) => {
@@ -138,7 +134,6 @@ const HighwayGame = () => {
       let carSpeed = 0;
       const maxSpeed = 2; 
       const acceleration = 0.02;
-      const deceleration = 0.1; 
       const reverseSpeed = -1; 
 
       const handleKeyDown = (event) => {
