@@ -29,7 +29,7 @@ const CartoonFace = () => {
     };
   }, []);
 
-  return (
+  return (a
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-50">
       <div className="relative w-64 h-64">
         <div 
