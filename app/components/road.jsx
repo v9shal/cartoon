@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const SIGNBOARD_TYPES = [
@@ -161,7 +161,7 @@ const HighwayGame = () => {
         car.position.z -= carSpeed;
         camera.position.z = car.position.z + 20;
 
-        signboards.forEach(({ mesh, type, limit, getMessage }) => {
+        signboards.forEach(({ mesh, limit, getMessage }) => {
           if (Math.abs(car.position.z - mesh.position.z) < 2) {
             setGameState((prev) => ({
               ...prev,
